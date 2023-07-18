@@ -27,8 +27,8 @@ class Solution:
         self.utility.copy_from_template_dir(".gitignore", dir_path)
         edgeagent_schema_version = runtime_tag
         edgehub_schema_version = runtime_tag
-        # exception for runtime version 1.2
-        if(runtime_tag == "1.2"):
+        # exception for runtime version 1.4
+        if(runtime_tag == "1.4"):
             edgeagent_schema_version = "1.1"
             edgehub_schema_version = "1.2"
 

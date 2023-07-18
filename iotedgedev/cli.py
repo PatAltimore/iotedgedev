@@ -90,16 +90,16 @@ def docker():
                 required=True)
 @click.option("--edge-runtime-version",
               "-er",
-              default="1.2",
+              default="1.4",
               show_default=True,
               required=False,
-              help="Specify the IoT Edge Runtime Version. Currently available 1.0, 1.1, 1.2")
+              help="Specify the IoT Edge Runtime Version. Currently available 1.1, 1.4")
 @add_module_options(envvars, init=True)
 @with_telemetry
 def new(name, module, template, edge_runtime_version, group_id):
     if edge_runtime_version is not None:
-        if (str(edge_runtime_version) != "1.0" and str(edge_runtime_version) != "1.1" and str(edge_runtime_version) != "1.2"):
-            output.info('-edge-runtime-version `{0}` is not valid. Currently supported versions are 1.0, 1.1, 1.2'.format(edge_runtime_version))
+        if (str(edge_runtime_version) != "1.1" and str(edge_runtime_version) != "1.4"):
+            output.info('-edge-runtime-version `{0}` is not valid. Available versions are 1.1 and 1.4'.format(edge_runtime_version))
             sys.exit()
     utility = Utility(envvars, output)
     sol = Solution(output, utility)
@@ -117,16 +117,16 @@ main.add_command_with_deprecation(new, deprecated=True, alt="solution new")
                 default=".")
 @click.option("--edge-runtime-version",
               "-er",
-              default="1.2",
+              default="1.4",
               show_default=True,
               required=False,
-              help="Specify the IoT Edge Runtime Version. Currently available 1.0, 1.1, 1.2")
+              help="Specify the IoT Edge Runtime Version. Currently available 1.1, 1.4")
 @add_module_options(envvars, init=True)
 @with_telemetry
 def init(name, module, template, group_id, edge_runtime_version):
     if edge_runtime_version is not None:
-        if (str(edge_runtime_version) != "1.0" and str(edge_runtime_version) != "1.1" and str(edge_runtime_version) != "1.2"):
-            output.info('-edge-runtime-version `{0}` is not valid. Currently supported versions are 1.0, 1.1, 1.2'.format(edge_runtime_version))
+        if (str(edge_runtime_version) != "1.1" and str(edge_runtime_version) != "1.4"):
+            output.info('-edge-runtime-version `{0}` is not valid. Currently supported versions are 1.1, 1.4'.format(edge_runtime_version))
             sys.exit()
     utility = Utility(envvars, output)
 
