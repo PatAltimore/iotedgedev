@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:0-${PYTHON_VERSION}
 
 # Dependencies versions
 ARG AZURE_CLI_VERSION="2.34.1-1~bullseye"
-ARG NODE_VERSION="17.x"
+ARG NODE_VERSION="18.x"
 ARG DOTNET_VERSION="5.0"
 ARG JDK_VERSION="2:1.11-72"
 ARG MAVEN_VERSION="3.6.3-5"
