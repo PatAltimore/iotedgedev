@@ -30,7 +30,7 @@ class Solution:
         # exception for runtime version 1.4
         if(runtime_tag == "1.4"):
             edgeagent_schema_version = "1.1"
-            edgehub_schema_version = "1.2"
+            edgehub_schema_version = "1.1"
 
         self.utility.copy_from_template_dir(".env.tmp", dir_path, dest_file=".env", replacements={
                                             "%EDGE_RUNTIME_VERSION%": runtime_tag, "%EDGEAGENT_SCHEMA_VERSION%": edgeagent_schema_version, "%EDGEHUB_SCHEMA_VERSION%": edgehub_schema_version})
